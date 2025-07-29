@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heart Disease Prediction - HealthCare AI</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Heart Disease Risk Checker</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="login.html">Login</a>
+      <a href="chatbot.html">Chatbot</a>
+    </nav>
+  </header>
+  <main>
+    <form id="predict-form">
+      <label>Age:</label><br>
+      <input type="number" id="age" required><br><br>
+
+      <label>Sex:</label><br>
+      <select id="sex" required>
+        <option value="1">Male</option>
+        <option value="0">Female</option>
+      </select><br><br>
+
+      <label>Chest Pain Type (0–3):</label><br>
+      <input type="number" id="cp" min="0" max="3" required><br><br>
+
+      <label>Resting Blood Pressure:</label><br>
+      <input type="number" id="trestbps" required><br><br>
+
+      <label>Cholesterol:</label><br>
+      <input type="number" id="chol" required><br><br>
+
+      <label>Fasting Blood Sugar > 120 mg/dl (1 = True, 0 = False):</label><br>
+      <select id="fbs" required>
+        <option value="1">True</option>
+        <option value="0">False</option>
+      </select><br><br>
+
+      <label>Resting ECG Result (0–2):</label><br>
+      <input type="number" id="restecg" min="0" max="2" required><br><br>
+
+      <label>Max Heart Rate:</label><br>
+      <input type="number" id="thalach" required><br><br>
+
+      <label>Exercise Induced Angina (1 = Yes, 0 = No):</label><br>
+      <select id="exang" required>
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+      </select><br><br>
+
+      <button type="submit">Predict</button>
+    </form>
+
+    <p id="predict-result"></p>
+  </main>
+  <script src="js/predict.js"></script>
+</body>
+</html>
